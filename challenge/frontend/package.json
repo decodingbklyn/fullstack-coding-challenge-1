@@ -35,5 +35,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^12.1.5"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
