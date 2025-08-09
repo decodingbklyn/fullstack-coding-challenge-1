@@ -18,6 +18,7 @@ const CasesTable = ({ complaints }) => {
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
+                <TableCell>District</TableCell>
                 <TableCell>Type</TableCell>
                 <TableCell>Description</TableCell>
                 <TableCell>Open Date</TableCell>
@@ -26,14 +27,13 @@ const CasesTable = ({ complaints }) => {
             </TableHead>
             <TableBody>
               {complaints.map((c) => (
-                <TableRow key={c.id} hover>
-                  <TableCell>{c.id}</TableCell>
-                  <TableCell>{c.type}</TableCell>
-                  <TableCell>{c.description}</TableCell>
-                  <TableCell>{new Date(c.openDate).toLocaleDateString()}</TableCell>
-                  <TableCell>
-                    {c.closeDate ? new Date(c.closeDate).toLocaleDateString() : '—'}
-                  </TableCell>
+                <TableRow key={c.unique_key} hover>
+                  <TableCell>{c.unique_key}</TableCell>
+                  <TableCell>{c.council_dist}</TableCell>
+                  <TableCell>{c.complaint_type}</TableCell>
+                  <TableCell>{c.descriptor}</TableCell>
+                  <TableCell>{c.opendate}</TableCell>
+                  <TableCell>{c.closedate ? c.closedate : '—'}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
