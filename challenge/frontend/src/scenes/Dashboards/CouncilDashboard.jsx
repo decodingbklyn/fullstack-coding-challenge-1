@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { baseComplaintUrl, rootUrl } from '../../config';
+import { baseComplaintUrl } from '../../config';
 import CasesTable from '../../components/Tables/CasesTable';
 import MetricsCard from '../../components/Cards/MetricsCard';
 import {
